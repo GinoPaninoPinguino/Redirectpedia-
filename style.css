@@ -1,11 +1,9 @@
 /* =====================================================
    REDIRECTPEDIA — design tokens
-   Concept: mappa dei trasporti del web. Ogni categoria
-   è una "linea" con un colore e un codice dedicato.
+   Ogni categoria è una "linea" con un colore dedicato.
    ===================================================== */
 
 :root {
-  /* base */
   --ink:        #14182B;
   --ink-raised: #1B2038;
   --paper:      #F1EFEA;
@@ -20,9 +18,8 @@
   --line-fsh: #6FA85C; /* file-sharing — verde */
   --line-gam: #4E8FE0; /* gaming — blu */
   --line-msc: #D97AA8; /* varie — rosa */
-  --line-bk: #BDB76B;
+  --line-bk:  #BDB76B; /* book — kaki */
 
-  /* type */
   --font-display: 'Archivo', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -110,32 +107,6 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.02em;
   flex: 1;
   min-width: 160px;
-}
-
-/* pulsante donazione — discreto, niente riempimenti sgargianti */
-.donate-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 8px 16px;
-  border: 1px solid var(--hairline);
-  border-radius: 999px;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--paper-dim);
-  transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
-  white-space: nowrap;
-}
-
-.donate-pill:hover,
-.donate-pill:focus-visible {
-  color: var(--paper);
-  border-color: var(--line-msc);
-  background: var(--ink-raised);
-}
-
-.donate-heart {
-  color: var(--line-msc);
 }
 
 /* ================= HERO ================= */
@@ -275,8 +246,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--paper-dim);
 }
 
-.tile-count::after { content: attr(data-count-for); display: none; } /* fallback no-op, evita FOUC */
-
 /* ================= VISTA: DETTAGLIO ================= */
 
 .detail-view { padding-top: 56px; padding-bottom: 64px; }
@@ -329,7 +298,6 @@ a { color: inherit; text-decoration: none; }
 .detail-panel[data-line="gam"] .panel-code { color: var(--line-gam); }
 .detail-panel[data-line="msc"] .panel-code { color: var(--line-msc); }
 .detail-panel[data-line="bk"]  .panel-code { color: var(--line-bk);  }
-
 
 .panel-heading {
   font-family: var(--font-display);
@@ -422,7 +390,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 28px;
 }
 
-/* stato gestito da JS: pannelli/viste nascosti finché non selezionati */
+/* stato gestito da JS: viste/pannelli nascosti finché non selezionati */
 .is-hidden { display: none; }
 
 /* ================= FOOTER ================= */
@@ -455,18 +423,6 @@ a { color: inherit; text-decoration: none; }
   max-width: 62ch;
 }
 
-.footer-donate {
-  color: var(--line-msc);
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  width: fit-content;
-}
-
-.footer-donate:hover,
-.footer-donate:focus-visible {
-  text-decoration: underline;
-}
-
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 880px) {
@@ -474,8 +430,19 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 560px) {
-  .tiles-grid { grid-template-columns: 1fr; }
+  .tiles-grid { grid-template-columns: 1fr; gap: 16px; }
   .hero { padding: 40px 20px 32px; }
   .wrap { padding: 0 18px; }
   .header-inner { flex-direction: column; align-items: flex-start; }
+
+  /* più respiro tra il titolo e la linea sotto "CHOOSE A CATEGORY" */
+  .section-label {
+    margin: 28px 0 24px;
+    padding-bottom: 18px;
+  }
+
+  /* più spazio tra l'ultima tessera della griglia e il footer,
+     così la linea del footer non "tocca" la tessera Book */
+  .tiles-view { padding-bottom: 48px; }
+  .site-footer { margin-top: 24px; }
 }
