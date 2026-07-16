@@ -115,7 +115,28 @@
 
   <!-- ================= VISTA: DETTAGLIO LINEA ================= -->
   <section class="detail-view wrap" id="detailView" aria-label="Links della linea selezionata">
-    <button class="back-btn" id="backBtn" type="button">← Back to homepage</button>
+    <div class="detail-toolbar">
+      <button class="back-btn" id="backBtn" type="button">← Back to homepage</button>
+
+      <div class="line-switch" id="lineSwitch">
+        <button class="line-switch-btn" id="lineSwitchBtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="lineSwitchMenu">
+          Switch category
+          <span class="line-switch-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="line-switch-menu is-hidden" id="lineSwitchMenu" role="menu">
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="str" href="#str"><span class="line-switch-dot" data-line="str" aria-hidden="true"></span>STR — Streaming</a></li>
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="ani" href="#ani"><span class="line-switch-dot" data-line="ani" aria-hidden="true"></span>ANI — Anime</a></li>
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="mng" href="#mng"><span class="line-switch-dot" data-line="mng" aria-hidden="true"></span>MNG — Manga</a></li>
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="bot" href="#bot"><span class="line-switch-dot" data-line="bot" aria-hidden="true"></span>BOT — Chatbot</a></li>
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="fsh" href="#fsh"><span class="line-switch-dot" data-line="fsh" aria-hidden="true"></span>FSH — File-sharing</a></li>
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="gam" href="#gam"><span class="line-switch-dot" data-line="gam" aria-hidden="true"></span>GAM — Gaming</a></li>
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="msc" href="#msc"><span class="line-switch-dot" data-line="msc" aria-hidden="true"></span>MSC — Miscellaneous</a></li>
+          <li role="none"><a role="menuitem" class="line-switch-item" data-line="bk" href="#bk"><span class="line-switch-dot" data-line="bk" aria-hidden="true"></span>BK — Book</a></li>
+        </ul>
+      </div>
+    </div>
+
+
 
     <!-- INIZIO STREAMING -->
     <div class="detail-panel" data-line="str">
@@ -123,6 +144,7 @@
         <span class="panel-code">STR</span>
         <h2 class="panel-heading" tabindex="-1">Streaming</h2>
       </div>
+<p class="footer-note">A redirect site — no content is hosted here. Every link leads to the destination site, which remains responsible for its own content.</p>
       <ul class="stop-list">
         <li class="stop">
           <a href="https://www.cineby.at/" target="_blank" rel="noopener">
@@ -235,6 +257,8 @@
       </ul>
     </div>
 
+
+
     <!-- INIZIO ANIME -->
     <div class="detail-panel" data-line="ani">
       <div class="panel-head">
@@ -298,6 +322,8 @@
         </li>
       </ul>
     </div>
+
+
 
     <!-- INIZIO MANGA -->
     <div class="detail-panel" data-line="mng">
@@ -363,6 +389,8 @@
       </ul>
     </div>
 
+
+
     <!-- INIZIO CHATBOT -->
     <div class="detail-panel" data-line="bot">
       <div class="panel-head">
@@ -381,6 +409,8 @@
       </ul>
     </div>
 
+
+
     <!-- INIZIO FILE-SHARING -->
     <div class="detail-panel" data-line="fsh">
       <div class="panel-head">
@@ -392,6 +422,8 @@
         <li class="stop"><a href="https://www.filemail.com/it" target="_blank" rel="noopener">FileMail<span class="stop-arrow">→</span></a></li>
       </ul>
     </div>
+
+
 
     <!-- INIZIO GAMING -->
     <div class="detail-panel" data-line="gam">
@@ -407,6 +439,8 @@
         <li class="stop"><a href="https://fitgirl-repacks.site/" target="_blank" rel="noopener">FitGirl Repack<span class="stop-arrow">→</span></a></li>
       </ul>
     </div>
+
+
 
     <!-- INIZIO MISCELLANEOUS -->
     <div class="detail-panel" data-line="msc">
@@ -425,6 +459,8 @@
       </ul>
     </div>
 
+
+
     <!-- INIZIO BOOK -->
     <div class="detail-panel" data-line="bk">
       <div class="panel-head">
@@ -433,8 +469,11 @@
       </div>
       <ul class="stop-list">
         <li class="stop"><a href="https://openlibrary.org/" target="_blank" rel="noopener">OpenLibrary<span class="stop-arrow">→</span></a></li>
+	<li class="stop"><a href="https://z-library.sk/" target="_blank" rel="noopener">ZLibrary<span class="stop-arrow">→</span></a></li>
       </ul>
     </div>
+
+
 
     <noscript>
       <p class="noscript-note">La navigazione a schede richiede JavaScript. Con JavaScript disattivato, questa pagina mostra comunque tutti i link di ogni linea qui sopra.</p>
