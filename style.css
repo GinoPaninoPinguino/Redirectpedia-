@@ -1,8 +1,3 @@
-/* =====================================================
-   REDIRECTPEDIA — design tokens
-   Ogni categoria è una "linea" con un colore dedicato.
-   ===================================================== */
-
 :root {
   --ink:        #14182B;
   --ink-raised: #1B2038;
@@ -20,6 +15,7 @@
   --line-msc: #D97AA8; /* varie — rosa */
   --line-bk:  #BDB76B; /* book — kaki */
   --line-sup: #4FD8E5; /* support — ciano */
+  --line-tv:  #E23D4F; /* sport & tv — rosso cartellino */
 
   --font-display: 'Archivo', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -198,6 +194,7 @@ a { color: inherit; text-decoration: none; }
 .tile[data-line="msc"] .tile-bar { background: var(--line-msc); }
 .tile[data-line="bk"]  .tile-bar { background: var(--line-bk);  }
 .tile[data-line="sup"] .tile-bar { background: var(--line-sup); }
+.tile[data-line="tv"]  .tile-bar { background: var(--line-tv);  }
 
 .tile-top {
   display: flex;
@@ -222,6 +219,7 @@ a { color: inherit; text-decoration: none; }
 .tile[data-line="msc"] .tile-code { color: var(--line-msc); }
 .tile[data-line="bk"]  .tile-code { color: var(--line-bk);  }
 .tile[data-line="sup"] .tile-code { color: var(--line-sup); }
+.tile[data-line="tv"]  .tile-code { color: var(--line-tv);  }
 
 .tile-arrow {
   font-family: var(--font-mono);
@@ -373,6 +371,7 @@ a { color: inherit; text-decoration: none; }
 .line-switch-dot[data-line="msc"] { background: var(--line-msc); }
 .line-switch-dot[data-line="bk"]  { background: var(--line-bk);  }
 .line-switch-dot[data-line="sup"] { background: var(--line-sup); }
+.line-switch-dot[data-line="tv"]  { background: var(--line-tv);  }
 
 .detail-panel {
   max-width: 640px;
@@ -401,6 +400,7 @@ a { color: inherit; text-decoration: none; }
 .detail-panel[data-line="msc"] .panel-code { color: var(--line-msc); }
 .detail-panel[data-line="bk"]  .panel-code { color: var(--line-bk);  }
 .detail-panel[data-line="sup"] .panel-code { color: var(--line-sup); }
+.detail-panel[data-line="tv"]  .panel-code { color: var(--line-tv);  }
 
 .panel-heading {
   font-family: var(--font-display);
@@ -450,6 +450,7 @@ a { color: inherit; text-decoration: none; }
 .detail-panel[data-line="msc"] .stop a:hover { color: var(--line-msc); }
 .detail-panel[data-line="bk"]  .stop a:hover { color: var(--line-bk);  }
 .detail-panel[data-line="sup"] .stop a:hover { color: var(--line-sup); }
+.detail-panel[data-line="tv"]  .stop a:hover { color: var(--line-tv);  }
 
 .stop a:hover .stop-arrow,
 .stop a:focus-visible .stop-arrow {
