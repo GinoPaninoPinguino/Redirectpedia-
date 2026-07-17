@@ -1,8 +1,3 @@
-// Redirectpedia — navigazione tra la griglia delle linee, il dettaglio link
-// e la vista "categoria non trovata". Nessuna dipendenza esterna. Usa l'hash
-// dell'URL (#str, #ani, ...) così ogni linea resta condivisibile con un link
-// diretto e funziona il tasto "indietro" del browser.
-
 (function () {
   const tilesView = document.getElementById('tilesView');
   const detailView = document.getElementById('detailView');
